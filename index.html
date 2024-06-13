@@ -3,17 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Quiz Application</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+    <style>
+        /* Add some basic styling for better visualization */
+        #quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #question {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #answers {
+            margin-bottom: 20px;
+        }
+        .option-btn {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .option-btn:hover {
+            background-color: #f1f1f1;
+        }
+        #result {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: green;
+        }
+        #result.wrong {
+            color: red;
+        }
+        #timer {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: red;
+        }
+        #submit-btn {
+            display: none;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h2>Quiz Application</h2>
-        <p id="question">Loading question...</p>
-        <div id="answers" class="answer-options"></div>
-        <button id="submit-btn">Submit Answer</button>
-        <p id="result"></p>
-        <p id="timer">Time left: 15 seconds</p>
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="answers"></div>
+        <div id="result"></div>
+        <div id="timer"></div>
+        <button id="submit-btn">Submit</button>
     </div>
     <script src="app.js"></script>
 </body>
