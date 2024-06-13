@@ -49,8 +49,8 @@ If you'd like to contribute to this project, follow these steps:
 6. Create a new Pull Request.
 
 ## Credits
-- This project was created by [Ahmed Faraz].
-- Quiz data sourced from [Internet] (if applicable).
+- This project was created by Ahmed Faraz
+- Quiz data sourced from Internet
 
 ## License
 MIT License
