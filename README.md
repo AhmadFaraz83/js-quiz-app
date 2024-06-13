@@ -15,7 +15,8 @@ This project is a simple quiz application built using HTML, CSS, and JavaScript.
 
 
 ## Screenshots
-![Quiz Application Screenshot](C:\Users\Ahmad\Desktop\js-quiz-app\SS/Quizz-app.png)
+![Quiz Application Screenshot](https://raw.githubusercontent.com/yourusername/js-quiz-app/main/SS/Quizz-app.png)
+
 
 
 ## Technologies Used
