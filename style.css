@@ -54,4 +54,10 @@ body {
 
 #result, #timer {
     margin: 10px 0;
+}#score {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
+
+/* Additional styles as needed */
+

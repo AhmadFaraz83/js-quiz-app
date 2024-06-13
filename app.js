@@ -15,9 +15,11 @@ const questionElement = document.getElementById('question');
 const answersElement = document.getElementById('answers');
 const resultElement = document.getElementById('result');
 const timerElement = document.getElementById('timer');
+const scoreElement = document.getElementById('score'); // New: Element to display score
 
 let currentQuestionIndex = 0;
 let timer;
+let score = 0; // New: Variable to track score
 const totalTimePerQuestion = 15;
 
 // Function to start the timer
@@ -61,12 +63,17 @@ function checkAnswer(correct) {
     clearInterval(timer);
     if (correct) {
         resultElement.textContent = 'Correct!';
-        resultElement.classList.remove('wrong');
+        score++; // Increment score for correct answer
     } else {
         resultElement.textContent = 'Wrong!';
-        resultElement.classList.add('wrong');
     }
+    updateScore(); // Update score display
     setTimeout(proceedToNextQuestion, 1000);
+}
+
+// Function to update the score display
+function updateScore() {
+    scoreElement.textContent = `Score: ${score}`;
 }
 
 // Function to proceed to the next question
@@ -83,10 +90,12 @@ function proceedToNextQuestion() {
 function showFinalScore() {
     questionElement.textContent = 'Quiz Complete!';
     answersElement.innerHTML = '';
-    resultElement.textContent = 'Quiz Complete!';
+    resultElement.textContent = `Final Score: ${score}/${quizData.length}`;
     timerElement.textContent = '';
     clearInterval(timer);
+    submitButton.style.display = 'none';
 }
 
 // Start quiz on page load
 loadQuestion();
+updateScore(); // Update score display initially

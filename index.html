@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <style>
-        /* Add some basic styling for better visualization */
+        /* CSS Styles */
         #quiz-container {
             max-width: 600px;
             margin: 0 auto;
@@ -47,6 +47,10 @@
             margin-bottom: 20px;
             color: red;
         }
+        #score {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
         #submit-btn {
             display: none;
             padding: 10px 20px;
@@ -60,6 +64,7 @@
         <div id="answers"></div>
         <div id="result"></div>
         <div id="timer"></div>
+        <div id="score">Score: 0</div> <!-- Display score dynamically -->
         <button id="submit-btn">Submit</button>
     </div>
     <script src="app.js"></script>
