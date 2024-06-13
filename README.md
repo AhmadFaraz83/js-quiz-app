@@ -19,6 +19,7 @@ This project is a simple quiz application built using HTML, CSS, and JavaScript.
 
 
 
+
 ## Technologies Used
 - HTML
 - CSS
